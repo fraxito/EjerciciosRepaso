@@ -1,13 +1,13 @@
 /*
  * Autor Jorge Cisneros:
- * La clase Repaso 3 tiene que dibujar un rectángulo
- * con la esquina superior izquierda en el centro de la pantalla
+ * La clase Repaso 4 tiene que dibujar un rectángulo
+ *  en el centro de la pantalla
  * 
  * 
  */
 import acm.graphics.*;
 
-public class Repaso3 extends acm.program.GraphicsProgram{
+public class Repaso4 extends acm.program.GraphicsProgram{
 
 	//declaro una variable de instancia para almacenar el rectángulo
 	//como es de instancia, se ve desde el init y desde el run
@@ -15,11 +15,11 @@ public class Repaso3 extends acm.program.GraphicsProgram{
 	
 	//declaro otra variable de instancia que guardará el punto X de la
 	//pantalla en que empezará a pintarse el rectángulo
-	int distanciaX;
+	double distanciaX;
 	
 	//declaro otra variable de instancia que guardará el punto Y de la
 	//pantalla en que empezará a pintarse el rectángulo	
-	int distanciaY;
+	double distanciaY;
 	
 	public void init(){
 		//cambio el tamaño de la pantalla
@@ -33,11 +33,11 @@ public class Repaso3 extends acm.program.GraphicsProgram{
 	public void run(){
 		//divido el ancho de la pantalla en 2 para saber donde está
 		//la mitad exacta de la pantalla
-		distanciaX = getWidth()/2;
+		distanciaX = getWidth()/2 - rectangulo.getWidth()/2;
 		
 		//divido el alto de la pantalla en 2 para saber donde está
 		//la mitad exacta de la pantalla
-		distanciaY = getHeight()/2;
+		distanciaY = getHeight()/2 - rectangulo.getHeight()/2;
 		
 		rectangulo.setLocation(distanciaX, distanciaY);
 		
